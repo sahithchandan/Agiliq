@@ -32,7 +32,7 @@ def form(request):
             result = json.loads(response.text)
             if 'access_token' in result:
                 access_token = result['access_token']
-                post_url = "http://join.agiliq.com/api/resume/upload?access_token={}".format(access_token)
+                post_url = "http://join.agiliq.com/api/resume/upload/?access_token={}".format(access_token)
                 data = {"post_url": post_url}
                 return render_to_response('form.html',
                                           data,

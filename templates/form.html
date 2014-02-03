@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title></title>
     <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
@@ -14,26 +15,26 @@
 <body>
     <div class="container">
         <h2>Fill in your details:</h2>
-        <form role="form" method="post" action={{ post_url }}>
+        <form role="form" method="POST" action={{ post_url }} enctype="multipart/form-data">
           <div class="form-group">
             <label for="first_name">First Name</label>
-            <input type="text" class="form-control" id="first_name" placeholder="Enter your First Name">
+            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Enter your First Name">
           </div>
           <div class="form-group">
             <label for="last_name">Last Name</label>
-            <input type="text" class="form-control" id="last_name" placeholder="Enter your Last Name">
+            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Enter your Last Name">
           </div>
           <div class="form-group">
             <label for="projects_url">Github/Bitbucket Url</label>
-            <input type="text" class="form-control" id="projects_url" placeholder="Enter projects url">
+            <input type="text" class="form-control" name="projects_url" id="projects_url" placeholder="Enter projects url">
           </div>
           <div class="form-group">
             <label for="code_url">Code Url</label>
-            <input type="text" class="form-control" id="code_url" placeholder="Enter code url">
+            <input type="text" class="form-control" name="code_url" id="code_url" placeholder="Enter code url">
           </div>
           <div class="form-group">
             <label for="resume">Resume Input</label>
-            <input type="file" id="resume">
+            <input type="file" name="resume" id="resume">
             <p class="help-block">Upload your resume here.</p>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
